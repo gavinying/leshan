@@ -1,5 +1,7 @@
 package org.eclipse.leshan.client.demo;
 
+import java.util.Random;
+
 import org.eclipse.leshan.client.resource.BaseInstanceEnabler;
 import org.eclipse.leshan.core.response.ExecuteResponse;
 import org.eclipse.leshan.core.response.ReadResponse;
@@ -91,7 +93,8 @@ public class Power_Measurement extends BaseInstanceEnabler {
      * Getter for instantaneous_active_power.
      */
     public float getInstantaneous_active_power() {
-        return this.instantaneous_active_power;
+    	return new Random().nextFloat();
+        //return this.instantaneous_active_power;
     }
     
     /**
