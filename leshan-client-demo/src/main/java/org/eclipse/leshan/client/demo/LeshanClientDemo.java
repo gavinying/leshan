@@ -188,7 +188,10 @@ public class LeshanClientDemo {
         }
         initializer.setClassForObject(DEVICE, MyDevice.class);
         initializer.setInstancesForObject(LOCATION, locationInstance);
-        List<LwM2mObjectEnabler> enablers = initializer.create(SECURITY, SERVER, DEVICE, LOCATION);
+        //initializer.setInstancesForObject(3303, new Temperature());		// added for demo
+        //List<LwM2mObjectEnabler> enablers = initializer.create(SECURITY, SERVER, DEVICE, LOCATION, 3303);
+        initializer.setInstancesForObject(3305, new Temperature());		// added for demo
+        List<LwM2mObjectEnabler> enablers = initializer.create(SECURITY, SERVER, DEVICE, LOCATION, 3305);
 
         // Create client
         LeshanClientBuilder builder = new LeshanClientBuilder(endpoint);
